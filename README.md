@@ -14,4 +14,4 @@ $ make install
 $ make start
 ```
 
-[![asciicast](https://asciinema.org/a/afC2k4z9GBwNlYjMXkFVSGWay.svg)](https://asciinema.org/a/afC2k4z9GBwNlYjMXkFVSGWay)
+[![asciicast](https://asciinema.org/a/A84E2IBlvenliSKYSxShhB5lY.svg)](https://asciinema.org/a/A84E2IBlvenliSKYSxShhB5lY?autoplay=1)
