@@ -2,8 +2,14 @@
 
 # frontend-project-lv1
 
-how install:
-  make install
+## Setup
 
-how start:
-  make start
+```sh
+$ make install
+```
+
+## start:
+
+```sh
+$ make start
+```
