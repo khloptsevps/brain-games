@@ -1,20 +1,21 @@
 import readlineSync from 'readline-sync';
-import { getName, isEven } from './index.js';
+import {
+  getName, isEven, getNumber, win, isRight, lose, correct, ruleBrainEvenGame,
+} from './index.js';
 
 export default () => {
   const name = getName();
-  // rule of game
-  console.log('Answer "yes" if the number is even, otherwise "no".');
+  // game logic
+  console.log(ruleBrainEvenGame());
   for (let i = 1; i <= 3; i += 1) {
-    const number = Math.floor((Math.random() * 100) + 1);
+    const number = getNumber();
     const userAnswer = readlineSync.question(`Question: ${number}\nYour answer: `);
     const correctAnswer = isEven(number);
-    if (userAnswer === correctAnswer) {
-      console.log('Correct!');
+    if (isRight(userAnswer, correctAnswer)) {
+      console.log(correct());
     } else {
-      console.log(`"${userAnswer}" is wrong asnwer ;(. Correct answer was "${correctAnswer}"`);
-      return `Let's try again, ${name}!`;
+      return lose(userAnswer, correctAnswer, name);
     }
   }
-  return `Congratulations, ${name}!`;
+  return win(name);
 };

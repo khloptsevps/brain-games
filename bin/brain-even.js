@@ -1,8 +1,9 @@
 #!/usr/bin/env node
-import game from '../src/brain-even-game.js';
+import welcome from '../src/index.js';
+import parityCheckGame from '../src/brain-even-game.js';
 
 // welcome
-console.log('Welcome to the Brain Games!');
+console.log(welcome());
 
-// game "Parity Check"
-console.log(game());
+// game "Parity-Check"
+console.log(parityCheckGame());
