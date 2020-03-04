@@ -22,3 +22,8 @@ $ make start
 $ make brain-even
 ```
 
+## how to play: "Brain-calc"
+
+```sh 
+$ make brain-calc
+```
