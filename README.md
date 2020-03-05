@@ -2,6 +2,12 @@
 
 # frontend-project-lv1
 
+## Description
+
+```sh
+Coming soon
+```
+
 ## Setup
 
 ```sh
@@ -13,8 +19,6 @@ $ make install
 ```sh
 $ make start
 ```
-
-[![asciicast](https://asciinema.org/a/A84E2IBlvenliSKYSxShhB5lY.svg)](https://asciinema.org/a/A84E2IBlvenliSKYSxShhB5lY?autoplay=1)
 
 ## how to play: "Brain-even"
 
