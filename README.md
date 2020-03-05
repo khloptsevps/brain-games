@@ -6,9 +6,8 @@
 
 ## Description
 
-```sh
-Coming soon
-```
+Учебный проект школы программирования "Хекслет". [Ссылка](https://ru.hexlet.io/?ref=252944).
+Проект называется "Игры разума". Состоит и пяти простых, математических игр.
 
 ## Setup
 
@@ -44,4 +43,10 @@ $ make brain-gcd
 
 ```sh 
 $ make brain-progression
+```
+
+## how to play: "Brain-prime"
+
+```sh 
+$ make brain-prime
 ```
