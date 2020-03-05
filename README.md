@@ -2,8 +2,6 @@
 
 # "Brain Games"
 
-[frontend-project-lv1 by Hexlet](https://ru.hexlet.io/)
-
 ## Description
 
 ### Проект "Игры разума"
