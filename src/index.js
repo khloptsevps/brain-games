@@ -1,31 +1,37 @@
 import readlineSync from 'readline-sync';
+import gameEven from '../games/brain-even-game.js';
+import gameCalc from '../games/brain-calc-game.js';
 
-// general logic
-
-export default () => 'Welcome to the Brain Games!';
-
-export const getName = () => {
+// general
+const getName = () => {
   const name = readlineSync.question('May I have your name? ');
   return name;
 };
 
-export const getNumber = () => {
-  const randomNumber = Math.floor((Math.random() * 100) + 1);
-  return randomNumber;
-};
-
-export const isRight = (userAnswer, correctAnswer) => {
+const isRight = (userAnswer, correctAnswer) => {
   if (userAnswer !== correctAnswer) {
     return false;
   }
   return true;
 };
 
-export const correct = () => 'Correct!';
+const correct = () => 'Correct!';
 
-export const win = (name) => `Congratulations, ${name}!`;
+const win = (name) => `Congratulations, ${name}!`;
 
-export const lose = (userAnswer, correctAnswer, name) => `"${userAnswer}" is wrong asnwer ;(. Correct answer was "${correctAnswer}"\nLet's try again, ${name}!`;
+const lose = (userAnswer, correctAnswer, name) => `"${userAnswer}" is wrong asnwer ;(. Correct answer was "${correctAnswer}"\nLet's try again, ${name}!`;
+
+const getGame = (rule) => {
+  if (rule === 'Answer "yes" if the number is even, otherwise "no".') {
+    return gameEven();
+  }
+  if (rule === 'What is the result of the expression?') {
+    return gameCalc();
+  }
+  return 'not a game';
+};
+
+export const welcome = () => 'Welcome to the Brain Games!';
 
 // brain-games
 export const hello = () => {
@@ -33,27 +39,18 @@ export const hello = () => {
   return `Hello, ${name}!`;
 };
 
-// brain-even
-export const ruleBrainEvenGame = () => 'Answer "yes" if the number is even, otherwise "no".';
-
-export const isEven = (num) => {
-  if (num % 2 === 0) {
-    return 'yes';
+// game engine
+export default (ruleOfGame) => {
+  const name = getName();
+  console.log(ruleOfGame);
+  for (let i = 0; i < 3; i += 1) {
+    const question = getGame(ruleOfGame);
+    const [userAnswer, correctAnswer] = question;
+    if (isRight(userAnswer, correctAnswer)) {
+      console.log(correct());
+    } else {
+      return lose(userAnswer, correctAnswer, name);
+    }
   }
-  return 'no';
+  return win(name);
 };
-
-// brain-calc
-export const ruleBrainCalcGame = () => 'What is the result of the expression?';
-
-export const getOperator = () => {
-  const operators = ['+', '-', '*'];
-  const randomize = Math.floor(Math.random() * 3);
-  return operators[randomize];
-};
-
-export const sum = (a, b) => a + b;
-
-export const multiply = (a, b) => a * b;
-
-export const subtract = (a, b) => a - b;
