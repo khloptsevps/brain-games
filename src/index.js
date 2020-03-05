@@ -3,6 +3,7 @@ import gameEven from '../games/brain-even-game.js';
 import gameCalc from '../games/brain-calc-game.js';
 import gameGcd from '../games/brain-gcd-game.js';
 import gameProgression from '../games/brain-progression-game.js';
+import gameIsPrime from '../games/brain-prime-game.js';
 
 // general
 const getName = () => {
@@ -37,7 +38,7 @@ const getGame = (rule) => {
   if (rule === 'What number is missing in the progression?') {
     return gameProgression();
   }
-  return 'non';
+  return gameIsPrime();
 };
 
 export const welcome = () => 'Welcome to the Brain Games!';
