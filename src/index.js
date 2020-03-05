@@ -1,6 +1,7 @@
 import readlineSync from 'readline-sync';
 import gameEven from '../games/brain-even-game.js';
 import gameCalc from '../games/brain-calc-game.js';
+import gameGcd from '../games/brain-gcd-game.js';
 
 // general
 const getName = () => {
@@ -21,12 +22,16 @@ const win = (name) => `Congratulations, ${name}!`;
 
 const lose = (userAnswer, correctAnswer, name) => `"${userAnswer}" is wrong asnwer ;(. Correct answer was "${correctAnswer}"\nLet's try again, ${name}!`;
 
+// game selection
 const getGame = (rule) => {
   if (rule === 'Answer "yes" if the number is even, otherwise "no".') {
     return gameEven();
   }
   if (rule === 'What is the result of the expression?') {
     return gameCalc();
+  }
+  if (rule === 'Find the greatest common divisor of given numbers.') {
+    return gameGcd();
   }
   return 'not a game';
 };
