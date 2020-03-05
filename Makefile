@@ -12,3 +12,5 @@ brain-calc:
 	npx node bin/brain-calc.js
 brain-gcd:
 	npx node bin/brain-gcd.js
+brain-progression:
+	npx node bin/brain-progression.js
