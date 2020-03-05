@@ -31,3 +31,9 @@ $ make brain-even
 ```sh 
 $ make brain-calc
 ```
+
+## how to play: "Brain-gcd"
+
+```sh 
+$ make brain-gcd
+```
