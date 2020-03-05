@@ -2,6 +2,7 @@ import readlineSync from 'readline-sync';
 import gameEven from '../games/brain-even-game.js';
 import gameCalc from '../games/brain-calc-game.js';
 import gameGcd from '../games/brain-gcd-game.js';
+import gameProgression from '../games/brain-progression-game.js';
 
 // general
 const getName = () => {
@@ -33,7 +34,10 @@ const getGame = (rule) => {
   if (rule === 'Find the greatest common divisor of given numbers.') {
     return gameGcd();
   }
-  return 'not a game';
+  if (rule === 'What number is missing in the progression?') {
+    return gameProgression();
+  }
+  return 'non';
 };
 
 export const welcome = () => 'Welcome to the Brain Games!';
