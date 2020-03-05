@@ -39,3 +39,9 @@ $ make brain-calc
 ```sh 
 $ make brain-gcd
 ```
+
+## how to play: "Brain-progression"
+
+```sh 
+$ make brain-progression
+```
