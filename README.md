@@ -39,8 +39,8 @@ Winner
 Loser  
 [![asciicast](https://asciinema.org/a/jQKOVM1GcKdyRaHoJ3iwzgAot.svg)](https://asciinema.org/a/jQKOVM1GcKdyRaHoJ3iwzgAot)
 
-### Игра "НОД (Наибольший общий делитель)"
-## how to play: "Brain-gcd"
+## Игра "НОД (Наибольший общий делитель)"
+### how to play: "Brain-gcd"
 
 ```sh 
 $ make brain-gcd
@@ -52,8 +52,8 @@ Winner
 Loser  
 [![asciicast](https://asciinema.org/a/CFR1pEciCCg5vrgdzpPrwvYk1.svg)](https://asciinema.org/a/CFR1pEciCCg5vrgdzpPrwvYk1)
 
-### Игра "Арифметическая прогрессия"
-## how to play: "Brain-progression"
+## Игра "Арифметическая прогрессия"
+### how to play: "Brain-progression"
 
 ```sh 
 $ make brain-progression
@@ -65,8 +65,8 @@ Winner
 Loser  
 [![asciicast](https://asciinema.org/a/ibSwex71e4c6Wf1AU2xOg4DUz.svg)](https://asciinema.org/a/ibSwex71e4c6Wf1AU2xOg4DUz)
 
-### Игра "Простое ли число?"
-## how to play: "Brain-prime"
+## Игра "Простое ли число?"
+### how to play: "Brain-prime"
 
 ```sh 
 $ make brain-prime
