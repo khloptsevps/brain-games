@@ -1,25 +1,14 @@
 import readlineSync from 'readline-sync';
+import { getSmallNumber, buildProgression } from '../helper/math.js';
 
-// secondary functions
-const getIndex = () => Math.floor((Math.random() * 10));
+// game name
+export const gameName = () => 'progression';
 
-const buildProgression = () => {
-  let begin = Math.floor(Math.random() * 100);
-  const step = Math.floor((Math.random() * 5) + 1);
-  const result = [];
-  for (let i = 0; i < 10; i += 1) {
-    result.push(begin);
-    begin += step;
-  }
-  return result;
-};
-export const ruleBrainProgressionGame = () => 'What number is missing in the progression?';
-
-// game logic
+// game
 export default () => {
   const result = [];
   const progression = buildProgression();
-  const index = getIndex();
+  const index = getSmallNumber();
   const correctAnswer = progression[index];
   const hideNumber = progression.map((item) => {
     let hidedItem = item;

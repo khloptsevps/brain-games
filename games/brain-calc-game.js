@@ -1,25 +1,11 @@
 import readlineSync from 'readline-sync';
 import pairs from '@hexlet/pairs';
+import {
+  getNumber, getOperator, sum, subtract, multiply,
+} from '../helper/math.js';
 
-// secondary functions
-const getNumber = () => {
-  const randomNumber = Math.floor((Math.random() * 99) + 1);
-  return randomNumber;
-};
-
-const sum = (a, b) => a + b;
-
-const multiply = (a, b) => a * b;
-
-const subtract = (a, b) => a - b;
-
-const getOperator = () => {
-  const operators = ['+', '-', '*'];
-  const randomize = Math.floor(Math.random() * 3);
-  return operators[randomize];
-};
-
-export const ruleBrainCalcGame = () => 'What is the result of the expression?';
+// game name
+export const gameName = () => 'calc';
 
 // game
 export default () => {
