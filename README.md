@@ -13,12 +13,6 @@
 $ make install
 ```
 
-## start:
-
-```sh
-$ make start
-```
-
 ## how to play: "Brain-even"
 
 ```sh 
