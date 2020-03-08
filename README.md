@@ -12,8 +12,8 @@
 ```sh
 $ make install
 ```
-
-## how to play: "Brain-even"
+## Игра: "Проверка на чётность"
+### how to play: "Brain-even"
 
 ```sh 
 $ make brain-even
