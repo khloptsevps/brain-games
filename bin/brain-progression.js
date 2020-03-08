@@ -1,9 +1,10 @@
 #!/usr/bin/env node
-import game, { welcome } from '../src/index.js';
-import { ruleBrainProgressionGame } from '../games/brain-progression-game.js';
+import game from '../src/index.js';
+import { welcome } from '../helper/utility.js';
+import { gameName } from '../games/brain-progression-game.js';
 
 // welcome
 console.log(welcome());
 
 // game "Progression"
-console.log(game(ruleBrainProgressionGame()));
+console.log(game(gameName()));
