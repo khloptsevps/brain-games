@@ -12,55 +12,66 @@
 ```sh
 $ make install
 ```
+
 ## Игра: "Проверка на чётность"
 ### how to play: "Brain-even"
 
 ```sh 
 $ make brain-even
 ```
+
 Winner  
 [![asciicast](https://asciinema.org/a/BpjBs1x7QGsPvwram7vZbiYD4.svg)](https://asciinema.org/a/BpjBs1x7QGsPvwram7vZbiYD4)
 
 Loser  
 [![asciicast](https://asciinema.org/a/rvmDp7Nu9rlGexeJ6Ga15FjVL.svg)](https://asciinema.org/a/rvmDp7Nu9rlGexeJ6Ga15FjVL)
-## how to play: "Brain-calc"
+
+## Игра: "Калькулятор"
+### how to play: "Brain-calc"
 
 ```sh 
 $ make brain-calc
 ```
+
 Winner  
 [![asciicast](https://asciinema.org/a/rXosPQDV8Q82n7tgBgrorCnmb.svg)](https://asciinema.org/a/rXosPQDV8Q82n7tgBgrorCnmb)
 
 Loser  
 [![asciicast](https://asciinema.org/a/jQKOVM1GcKdyRaHoJ3iwzgAot.svg)](https://asciinema.org/a/jQKOVM1GcKdyRaHoJ3iwzgAot)
 
+### Игра "НОД (Наибольший общий делитель)"
 ## how to play: "Brain-gcd"
 
 ```sh 
 $ make brain-gcd
 ```
+
 Winner  
 [![asciicast](https://asciinema.org/a/tjo7JdxBZrnIj57BONUR2kol1.svg)](https://asciinema.org/a/tjo7JdxBZrnIj57BONUR2kol1)
 
 Loser  
 [![asciicast](https://asciinema.org/a/CFR1pEciCCg5vrgdzpPrwvYk1.svg)](https://asciinema.org/a/CFR1pEciCCg5vrgdzpPrwvYk1)
 
+### Игра "Арифметическая прогрессия"
 ## how to play: "Brain-progression"
 
 ```sh 
 $ make brain-progression
 ```
+
 Winner  
 [![asciicast](https://asciinema.org/a/7vx5xmFn0hmVDUSN2qPDYYgKv.svg)](https://asciinema.org/a/7vx5xmFn0hmVDUSN2qPDYYgKv)
 
 Loser  
 [![asciicast](https://asciinema.org/a/ibSwex71e4c6Wf1AU2xOg4DUz.svg)](https://asciinema.org/a/ibSwex71e4c6Wf1AU2xOg4DUz)
 
+### Игра "Простое ли число?"
 ## how to play: "Brain-prime"
 
 ```sh 
 $ make brain-prime
 ```
+
 Winner  
 [![asciicast](https://asciinema.org/a/IIPgbHIRg4m0INcx0Rr2KzwD7.svg)](https://asciinema.org/a/IIPgbHIRg4m0INcx0Rr2KzwD7)
 
