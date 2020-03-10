@@ -14,7 +14,7 @@ $ make install
 ```
 
 ## Игра: "Проверка на чётность"
-### how to play: "Brain-even"
+### how to play: "brain-even"
 
 ```sh 
 $ make brain-even
@@ -27,7 +27,7 @@ Loser
 [![asciicast](https://asciinema.org/a/rvmDp7Nu9rlGexeJ6Ga15FjVL.svg)](https://asciinema.org/a/rvmDp7Nu9rlGexeJ6Ga15FjVL)
 
 ## Игра: "Калькулятор"
-### how to play: "Brain-calc"
+### how to play: "brain-calc"
 
 ```sh 
 $ make brain-calc
@@ -40,7 +40,7 @@ Loser
 [![asciicast](https://asciinema.org/a/jQKOVM1GcKdyRaHoJ3iwzgAot.svg)](https://asciinema.org/a/jQKOVM1GcKdyRaHoJ3iwzgAot)
 
 ## Игра "НОД (Наибольший общий делитель)"
-### how to play: "Brain-gcd"
+### how to play: "brain-gcd"
 
 ```sh 
 $ make brain-gcd
@@ -53,7 +53,7 @@ Loser
 [![asciicast](https://asciinema.org/a/CFR1pEciCCg5vrgdzpPrwvYk1.svg)](https://asciinema.org/a/CFR1pEciCCg5vrgdzpPrwvYk1)
 
 ## Игра "Арифметическая прогрессия"
-### how to play: "Brain-progression"
+### how to play: "brain-progression"
 
 ```sh 
 $ make brain-progression
@@ -66,7 +66,7 @@ Loser
 [![asciicast](https://asciinema.org/a/ibSwex71e4c6Wf1AU2xOg4DUz.svg)](https://asciinema.org/a/ibSwex71e4c6Wf1AU2xOg4DUz)
 
 ## Игра "Простое ли число?"
-### how to play: "Brain-prime"
+### how to play: "brain-prime"
 
 ```sh 
 $ make brain-prime
