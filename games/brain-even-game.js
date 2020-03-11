@@ -5,7 +5,7 @@ import { getRandomNumber } from '../helper/math.js';
 export const gameName = () => 'even';
 
 // even number check
-export const isEven = (num) => {
+const isEven = (num) => {
   if (num % 2 === 0) {
     return true;
   }
@@ -15,7 +15,7 @@ export const isEven = (num) => {
 // game
 export default () => {
   const result = [];
-  const number = getRandomNumber();
+  const number = getRandomNumber(1, 101);
   const userAnswer = readlineSync.question(`Question: ${number}\nYour answer: `);
   let correctAnswer;
   if (isEven(number)) {
