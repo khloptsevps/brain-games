@@ -1,9 +1,10 @@
 import {
-  correct, getName, isRight, lose, win, getGame, getRule,
+  correct, getName, isRight, lose, win, getGame, getRule, welcome,
 } from '../helper/utility.js';
 
 // game engine
 export default (game) => {
+  console.log(welcome());
   const name = getName();
   console.log(getRule(game));
   for (let i = 0; i < 3; i += 1) {
@@ -12,8 +13,8 @@ export default (game) => {
     if (isRight(userAnswer, correctAnswer)) {
       console.log(correct());
     } else {
-      return lose(userAnswer, correctAnswer, name);
+      return console.log(lose(userAnswer, correctAnswer, name));
     }
   }
-  return win(name);
+  return console.log(win(name));
 };
