@@ -4,17 +4,6 @@ export const getRandomNumber = (min, max) => {
   return randomize;
 };
 
-// greatest common devider two numbers
-export const gcd = (num1, num2) => {
-  let result = 0;
-  for (let i = 1; i <= num1; i += 1) {
-    if (num1 % i === 0 && num2 % i === 0) {
-      result = i;
-    }
-  }
-  return result;
-};
-
 // prime check
 export const isPrime = (num) => {
   if (num < 2) {
