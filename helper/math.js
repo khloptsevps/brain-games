@@ -4,14 +4,6 @@ export const getRandomNumber = (min, max) => {
   return randomize;
 };
 
-// even number check
-export const isEven = (num) => {
-  if (num % 2 === 0) {
-    return true;
-  }
-  return false;
-};
-
 // greatest common devider two numbers
 export const gcd = (num1, num2) => {
   let result = 0;
