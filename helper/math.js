@@ -4,19 +4,6 @@ export const getRandomNumber = (min, max) => {
   return randomize;
 };
 
-// prime check
-export const isPrime = (num) => {
-  if (num < 2) {
-    return false;
-  }
-  for (let i = 2; i <= num / 2; i += 1) {
-    if (num % i === 0) {
-      return false;
-    }
-  }
-  return true;
-};
-
 // buildMathProgression
 export const buildProgression = () => {
   let begin = getRandomNumber(0, 101);
