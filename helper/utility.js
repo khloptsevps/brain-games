@@ -71,7 +71,7 @@ export const getRule = (gameName) => {
 // brain-games
 export const hello = () => {
   const name = getName();
-  return `Hello, ${name}!`;
+  return console.log(`Hello, ${name}!`);
 };
 
 // test
