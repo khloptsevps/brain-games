@@ -1,13 +1,21 @@
 import readlineSync from 'readline-sync';
-import { isEven, getNumber } from '../helper/math.js';
+import { getRandomNumber } from '../helper/math.js';
 
 // game name
 export const gameName = () => 'even';
 
+// even number check
+export const isEven = (num) => {
+  if (num % 2 === 0) {
+    return true;
+  }
+  return false;
+};
+
 // game
 export default () => {
   const result = [];
-  const number = getNumber();
+  const number = getRandomNumber();
   const userAnswer = readlineSync.question(`Question: ${number}\nYour answer: `);
   let correctAnswer;
   if (isEven(number)) {
