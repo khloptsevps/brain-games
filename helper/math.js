@@ -1,8 +1,8 @@
-// random number from 1 to 100;
-export const getNumber = () => Math.floor((Math.random() * 100) + 1);
-
-// random number from 0 to 9;
-export const getSmallNumber = () => Math.floor((Math.random() * 10));
+// get random number from range
+export const getRandomNumber = (min, max) => {
+  const randomize = Math.floor(Math.random() * (max - min) + min);
+  return randomize;
+};
 
 // even number check
 export const isEven = (num) => {
@@ -10,22 +10,6 @@ export const isEven = (num) => {
     return true;
   }
   return false;
-};
-
-// sum two elements
-export const sum = (a, b) => a + b;
-
-// multiply two elemenst
-export const multiply = (a, b) => a * b;
-
-// subtract two elements
-export const subtract = (a, b) => a - b;
-
-// get random operator
-export const getOperator = () => {
-  const operators = ['+', '-', '*'];
-  const randomize = Math.floor(Math.random() * 3);
-  return operators[randomize];
 };
 
 // greatest common devider two numbers
@@ -54,7 +38,7 @@ export const isPrime = (num) => {
 
 // buildMathProgression
 export const buildProgression = () => {
-  let begin = getNumber();
+  let begin = getRandomNumber(0, 101);
   const step = Math.floor((Math.random() * 5) + 1);
   const result = [];
   for (let i = 0; i < 10; i += 1) {
