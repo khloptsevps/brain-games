@@ -7,12 +7,12 @@ publish:
 lint:
 	npx eslint .
 even:
-	brain-even.js
+	brain-even
 calc:
-	brain-calc.js
+	brain-calc
 gcd:
-	brain-gcd.js
+	brain-gcd
 progression:
-	brain-progression.js
+	brain-progression
 prime:
-	brain-prime.js
+	brain-prime
