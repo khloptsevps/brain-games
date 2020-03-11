@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 import pairs from '@hexlet/pairs';
-import { getRandomNumber } from '../helper/math.js';
+import getRandomNumber from '../helper/math.js';
 
 // game name
 export const gameName = () => 'calc';
