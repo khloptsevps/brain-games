@@ -17,7 +17,7 @@ const subtract = (a, b) => a - b;
 // get random operator
 const getOperator = () => {
   const operators = ['+', '-', '*'];
-  const randomize = Math.floor(Math.random() * 3);
+  const randomize = getRandomNumber(0, 3);
   return operators[randomize];
 };
 
