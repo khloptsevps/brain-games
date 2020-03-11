@@ -1,7 +1,7 @@
 install:
 	npm install
 start:
-	brain-games.js
+	brain-games
 publish:
 	npm publish --dry-run
 lint:
