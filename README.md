@@ -60,10 +60,10 @@ $ make progression
 ```
 
 Winner  
-[![asciicast](https://asciinema.org/a/7vx5xmFn0hmVDUSN2qPDYYgKv.svg)](https://asciinema.org/a/7vx5xmFn0hmVDUSN2qPDYYgKv)
+[![asciicast](https://asciinema.org/a/v0gHe6e0VnIwYb4UQbc0BjDO7.svg)](https://asciinema.org/a/v0gHe6e0VnIwYb4UQbc0BjDO7)
 
 Loser  
-[![asciicast](https://asciinema.org/a/ibSwex71e4c6Wf1AU2xOg4DUz.svg)](https://asciinema.org/a/ibSwex71e4c6Wf1AU2xOg4DUz)
+[![asciicast](https://asciinema.org/a/5PG1nOyY37CVtegNReaKrQ5jX.svg)](https://asciinema.org/a/5PG1nOyY37CVtegNReaKrQ5jX)
 
 ## Игра "Простое ли число?"
 ### how to play: "brain-prime"
