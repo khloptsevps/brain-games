@@ -1,11 +1,8 @@
-import readlineSync from 'readline-sync';
 import getRandomNumber from '../helper/math.js';
-
-// game name
-export const gameName = () => 'progression';
+import gameEngine from '../src/index.js';
 
 // buildMathProgression
-export const buildProgression = () => {
+const buildProgression = () => {
   let begin = getRandomNumber(0, 101);
   const step = Math.floor((Math.random() * 5) + 1);
   const result = [];
@@ -16,8 +13,11 @@ export const buildProgression = () => {
   return result;
 };
 
+// game rule
+const gameRule = () => 'What number is missing in the progression?';
+
 // game
-export default () => {
+const gameProgression = () => {
   const result = [];
   const progression = buildProgression();
   const index = getRandomNumber(0, 10);
@@ -29,7 +29,10 @@ export default () => {
     }
     return hidedItem;
   }).join(' ');
-  const userAnswer = Number(readlineSync.question(`Question: ${hideNumber}\nYour answer: `));
-  result.push(userAnswer, correctAnswer);
+  const expression = hideNumber;
+  result.push(expression, String(correctAnswer));
   return result;
 };
+
+// game start
+export default () => gameEngine(gameRule(), gameProgression);
