@@ -1,5 +1,4 @@
 import readlineSync from 'readline-sync';
-import { getGame, getRule } from '../helper/utility.js';
 
 // Welcome message
 const welcome = () => '\nWelcome to the Brain Games!';
@@ -11,10 +10,10 @@ const getName = () => {
 };
 
 // if correctly answer
-const correct = () => 'Correct!';
+const correct = () => 'Correct!\n';
 
 // user win
-const win = (name) => `Congratulations, ${name}!`;
+const win = (name) => `\nCongratulations, ${name}!`;
 
 // user lose
 const lose = (userAnswer, correctAnswer, name) => `\n"${userAnswer}" is wrong asnwer ;(. Correct answer was "${correctAnswer}"\nLet's try again, ${name}!`;
@@ -28,13 +27,14 @@ const isRight = (userAnswer, correctAnswer) => {
 };
 
 // game engine
-export default (game) => {
+export default (game, getQuestion) => {
   console.log(welcome());
   const name = getName();
-  console.log(getRule(game));
+  console.log(game);
   for (let i = 0; i < 3; i += 1) {
-    const question = getGame(game);
-    const [userAnswer, correctAnswer] = question;
+    const question = getQuestion();
+    const [value, correctAnswer] = question;
+    const userAnswer = readlineSync.question(`Question: ${value}\nYour answer: `);
     if (isRight(userAnswer, correctAnswer)) {
       console.log(correct());
     } else {
