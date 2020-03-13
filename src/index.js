@@ -33,8 +33,8 @@ export default (game, getQuestion) => {
   console.log(game);
   for (let i = 0; i < 3; i += 1) {
     const question = getQuestion();
-    const [value, correctAnswer] = question;
-    const userAnswer = readlineSync.question(`Question: ${value}\nYour answer: `);
+    const [expression, correctAnswer] = question;
+    const userAnswer = readlineSync.question(`Question: ${expression}\nYour answer: `);
     if (isRight(userAnswer, correctAnswer)) {
       console.log(correct());
     } else {
