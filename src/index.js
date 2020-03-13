@@ -27,10 +27,10 @@ const isRight = (userAnswer, correctAnswer) => {
 };
 
 // game engine
-export default (game, getQuestion) => {
+export default (gameRule, getQuestion) => {
   console.log(welcome());
   const name = getName();
-  console.log(game);
+  console.log(gameRule);
   for (let i = 0; i < 3; i += 1) {
     const question = getQuestion();
     const [expression, correctAnswer] = question;
