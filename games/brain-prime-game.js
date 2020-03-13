@@ -1,11 +1,8 @@
-import readlineSync from 'readline-sync';
 import getRandomNumber from '../helper/math.js';
-
-// game name
-export const gameName = () => 'prime';
+import gameEngine from '../src/index.js';
 
 // prime check
-export const isPrime = (num) => {
+const isPrime = (num) => {
   if (num < 2) {
     return false;
   }
@@ -17,8 +14,11 @@ export const isPrime = (num) => {
   return true;
 };
 
-// game
-export default () => {
+// game rule
+const gameRule = () => 'Answer "yes" if given number is prime. Otherwise answer "no".';
+
+// game logic
+const gamePrime = () => {
   const result = [];
   const number = getRandomNumber(1, 101);
   let correctAnswer;
@@ -27,7 +27,9 @@ export default () => {
   } else {
     correctAnswer = 'no';
   }
-  const userAnswer = readlineSync.question(`Question: ${number}\nYour answer: `);
-  result.push(userAnswer, correctAnswer);
+  const expression = number;
+  result.push(expression, correctAnswer);
   return result;
 };
+
+export default () => gameEngine(gameRule(), gamePrime);
