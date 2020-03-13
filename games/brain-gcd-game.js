@@ -1,9 +1,6 @@
-import readlineSync from 'readline-sync';
 import pairs from '@hexlet/pairs';
 import getRandomNumber from '../helper/math.js';
-
-// game name
-export const gameName = () => 'gcd';
+import gameEngine from '../src/index.js';
 
 // greatest common devider two numbers
 const gcd = (num1, num2) => {
@@ -16,12 +13,18 @@ const gcd = (num1, num2) => {
   return result;
 };
 
-// game
-export default () => {
+// game rule
+const gameRule = () => '\nFind the greatest common divisor of given numbers.\n';
+
+// game logic
+const gameGcd = () => {
   const result = [];
   const pair = pairs.cons(getRandomNumber(1, 101), getRandomNumber(1, 101));
   const correctAnser = gcd(pairs.car(pair), pairs.cdr(pair));
-  const userAnswer = Number(readlineSync.question(`Question: ${pairs.car(pair)} ${pairs.cdr(pair)}\nYour answer: `));
-  result.push(userAnswer, correctAnser);
+  const expression = `${pairs.car(pair)} ${pairs.cdr(pair)}`;
+  result.push(expression, String(correctAnser));
   return result;
 };
+
+// game start
+export default () => gameEngine(gameRule(), gameGcd);
