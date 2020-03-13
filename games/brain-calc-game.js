@@ -1,9 +1,6 @@
-import readlineSync from 'readline-sync';
 import pairs from '@hexlet/pairs';
 import getRandomNumber from '../helper/math.js';
-
-// game name
-export const gameName = () => 'calc';
+import gameEngine from '../src/index.js';
 
 // sum two elements
 const sum = (a, b) => a + b;
@@ -20,12 +17,14 @@ const getOperator = () => {
   const randomize = getRandomNumber(0, 3);
   return operators[randomize];
 };
+// game rule
+const gameRule = () => '\nWhat is the result of the expression?\n';
 
 // game
-export default () => {
+const gameCalc = () => {
   const result = [];
   let correctAnswer = 0;
-  const pair = pairs.cons(getRandomNumber(0, 50), getRandomNumber(0, 50));
+  const pair = pairs.cons(getRandomNumber(1, 25), getRandomNumber(1, 20));
   const operator = getOperator();
   if (operator === '+') {
     correctAnswer = sum(pairs.car(pair), pairs.cdr(pair));
@@ -34,7 +33,9 @@ export default () => {
   } else {
     correctAnswer = multiply(pairs.car(pair), pairs.cdr(pair));
   }
-  const userAnswer = Number(readlineSync.question(`Question: ${pairs.car(pair)} ${operator} ${pairs.cdr(pair)}\nYour answer: `));
-  result.push(userAnswer, correctAnswer);
+  const expression = `${pairs.car(pair)} ${operator} ${pairs.cdr(pair)}`;
+  result.push(expression, String(correctAnswer));
   return result;
 };
+
+export default () => gameEngine(gameRule(), gameCalc);
