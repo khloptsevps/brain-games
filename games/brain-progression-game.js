@@ -14,7 +14,7 @@ const buildProgression = () => {
 };
 
 // game rule
-const gameRule = () => 'What number is missing in the progression?';
+const gameRule = () => '\nWhat number is missing in the progression?\n';
 
 // game
 const gameProgression = () => {
