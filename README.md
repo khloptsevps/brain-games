@@ -21,10 +21,10 @@ $ brain-even
 ```
 
 Winner  
-[![asciicast](https://asciinema.org/a/v0gHe6e0VnIwYb4UQbc0BjDO7.svg)](https://asciinema.org/a/v0gHe6e0VnIwYb4UQbc0BjDO7)
+[![asciicast](https://asciinema.org/a/luXChoupxK71NiQobMRFzRABQ.svg)](https://asciinema.org/a/luXChoupxK71NiQobMRFzRABQ)
 
 Loser  
-[![asciicast](https://asciinema.org/a/5PG1nOyY37CVtegNReaKrQ5jX.svg)](https://asciinema.org/a/5PG1nOyY37CVtegNReaKrQ5jX)
+[![asciicast](https://asciinema.org/a/4dzjOGF2drp6qGFVF8Qe8jXhO.svg)](https://asciinema.org/a/4dzjOGF2drp6qGFVF8Qe8jXhO)
 
 ## Игра: "Калькулятор"
 ### how to play: "brain-calc"
@@ -34,23 +34,23 @@ $ brain-calc
 ```
 
 Winner  
-[![asciicast](https://asciinema.org/a/RDFr5X8gDzSh0bLevEJMHKrx1.svg)](https://asciinema.org/a/RDFr5X8gDzSh0bLevEJMHKrx1)
+[![asciicast](https://asciinema.org/a/ojG4z6fQKnIZlZF6kd9hqVWpp.svg)](https://asciinema.org/a/ojG4z6fQKnIZlZF6kd9hqVWpp)
 
 Loser  
-[![asciicast](https://asciinema.org/a/K15YeKTgBzd3IQg2Xbh9i5XVU.svg)](https://asciinema.org/a/K15YeKTgBzd3IQg2Xbh9i5XVU)
+[![asciicast](https://asciinema.org/a/a5iAKA8HZF3gM1LHgBb9u6KKt.svg)](https://asciinema.org/a/a5iAKA8HZF3gM1LHgBb9u6KKt)
 
 ## Игра "НОД (Наибольший общий делитель)"
 ### how to play: "brain-gcd"
 
 ```sh 
-$ make brain-gcd
+$ brain-gcd
 ```
 
 Winner  
-[![asciicast](https://asciinema.org/a/uHLpnZEhYxYbRzMo8pVwJ6x8u.svg)](https://asciinema.org/a/uHLpnZEhYxYbRzMo8pVwJ6x8u)
+[![asciicast](https://asciinema.org/a/6HtJRXuGQ5ShD0Lt38vlPvRqQ.svg)](https://asciinema.org/a/6HtJRXuGQ5ShD0Lt38vlPvRqQ)
 
 Loser  
-[![asciicast](https://asciinema.org/a/NRrP6WDFFqb77wryKcWfEk0xx.svg)](https://asciinema.org/a/NRrP6WDFFqb77wryKcWfEk0xx)
+[![asciicast](https://asciinema.org/a/iiuinsT0pNrQ1laKSrRmCZRRg.svg)](https://asciinema.org/a/iiuinsT0pNrQ1laKSrRmCZRRg)
 
 ## Игра "Арифметическая прогрессия"
 ### how to play: "brain-progression"
@@ -60,10 +60,10 @@ $ brain-progression
 ```
 
 Winner  
-[![asciicast](https://asciinema.org/a/boBDyrbJA025JBp6dVUemMDgh.svg)](https://asciinema.org/a/boBDyrbJA025JBp6dVUemMDgh)
+[![asciicast](https://asciinema.org/a/FR0eLUni3oH5CNET7Yzcdk3Pi.svg)](https://asciinema.org/a/FR0eLUni3oH5CNET7Yzcdk3Pi)
 
 Loser  
-[![asciicast](https://asciinema.org/a/2JPV0nj0wzpocM4Ckq8KUOxPR.svg)](https://asciinema.org/a/2JPV0nj0wzpocM4Ckq8KUOxPR)
+[![asciicast](https://asciinema.org/a/Jir4d6REvHPSjE33nviCoAgnD.svg)](https://asciinema.org/a/Jir4d6REvHPSjE33nviCoAgnD)
 
 ## Игра "Простое ли число?"
 ### how to play: "brain-prime"
@@ -73,7 +73,7 @@ $ brain-prime
 ```
 
 Winner  
-[![asciicast](https://asciinema.org/a/vF7tXfR24CH136CZFxUjCi28r.svg)](https://asciinema.org/a/vF7tXfR24CH136CZFxUjCi28r)
+[![asciicast](https://asciinema.org/a/7qcVK9Lf4N3IHk9v10FRm5qHk.svg)](https://asciinema.org/a/7qcVK9Lf4N3IHk9v10FRm5qHk)
 
 Loser  
-[![asciicast](https://asciinema.org/a/eGLO7X9adTk9YD4Vcn2mOItHR.svg)](https://asciinema.org/a/eGLO7X9adTk9YD4Vcn2mOItHR)
+[![asciicast](https://asciinema.org/a/nFRg3A2luGlLzvu6ihF6sHdl7.svg)](https://asciinema.org/a/nFRg3A2luGlLzvu6ihF6sHdl7)
