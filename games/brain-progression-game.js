@@ -14,7 +14,7 @@ const buildProgression = () => {
 };
 
 // game rule
-const gameRule = () => '\nWhat number is missing in the progression?\n';
+const gameRule = 'What number is missing in the progression?';
 
 // game
 const gameProgression = () => {
@@ -35,4 +35,4 @@ const gameProgression = () => {
 };
 
 // game start
-export default () => gameEngine(gameRule(), gameProgression);
+export default () => gameEngine(gameRule, gameProgression);

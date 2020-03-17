@@ -15,7 +15,7 @@ const isPrime = (num) => {
 };
 
 // game rule
-const gameRule = () => '\nAnswer "yes" if given number is prime. Otherwise answer "no".\n';
+const gameRule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 // game logic
 const gamePrime = () => {
@@ -32,4 +32,4 @@ const gamePrime = () => {
   return result;
 };
 
-export default () => gameEngine(gameRule(), gamePrime);
+export default () => gameEngine(gameRule, gamePrime);

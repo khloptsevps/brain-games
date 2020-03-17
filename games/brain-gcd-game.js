@@ -14,7 +14,7 @@ const gcd = (num1, num2) => {
 };
 
 // game rule
-const gameRule = () => '\nFind the greatest common divisor of given numbers.\n';
+const gameRule = 'Find the greatest common divisor of given numbers.';
 
 // game logic
 const gameGcd = () => {
@@ -27,4 +27,4 @@ const gameGcd = () => {
 };
 
 // game start
-export default () => gameEngine(gameRule(), gameGcd);
+export default () => gameEngine(gameRule, gameGcd);

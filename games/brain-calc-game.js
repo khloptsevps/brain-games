@@ -18,7 +18,7 @@ const getOperator = () => {
   return operators[randomize];
 };
 // game rule
-const gameRule = () => '\nWhat is the result of the expression?\n';
+const gameRule = 'What is the result of the expression?';
 
 // game
 const gameCalc = () => {
@@ -38,4 +38,4 @@ const gameCalc = () => {
   return result;
 };
 
-export default () => gameEngine(gameRule(), gameCalc);
+export default () => gameEngine(gameRule, gameCalc);
