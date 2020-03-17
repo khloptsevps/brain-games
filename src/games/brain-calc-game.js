@@ -22,20 +22,21 @@ const gameRule = 'What is the result of the expression?';
 
 // game
 const gameCalc = () => {
-  const result = [];
   let correctAnswer = 0;
   const pair = pairs.cons(getRandomNumber(1, 25), getRandomNumber(1, 20));
   const operator = getOperator();
-  if (operator === '+') {
-    correctAnswer = sum(pairs.car(pair), pairs.cdr(pair));
-  } else if (operator === '-') {
-    correctAnswer = subtract(pairs.car(pair), pairs.cdr(pair));
-  } else {
-    correctAnswer = multiply(pairs.car(pair), pairs.cdr(pair));
+  switch (operator) {
+    case '+':
+      correctAnswer = sum(pairs.car(pair), pairs.cdr(pair));
+      break;
+    case '-':
+      correctAnswer = subtract(pairs.car(pair), pairs.cdr(pair));
+      break;
+    default:
+      correctAnswer = multiply(pairs.car(pair), pairs.cdr(pair));
   }
   const expression = `${pairs.car(pair)} ${operator} ${pairs.cdr(pair)}`;
-  result.push(expression, String(correctAnswer));
-  return result;
+  return [expression, String(correctAnswer)];
 };
 
 export default () => gameEngine(gameRule, gameCalc);
