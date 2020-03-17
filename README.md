@@ -17,7 +17,7 @@ $ make install
 ### how to play: "brain-even"
 
 ```sh 
-$ make even
+$ brain-even
 ```
 
 Winner  
@@ -30,7 +30,7 @@ Loser
 ### how to play: "brain-calc"
 
 ```sh 
-$ make calc
+$ brain-calc
 ```
 
 Winner  
@@ -43,7 +43,7 @@ Loser
 ### how to play: "brain-gcd"
 
 ```sh 
-$ make gcd
+$ make brain-gcd
 ```
 
 Winner  
@@ -56,7 +56,7 @@ Loser
 ### how to play: "brain-progression"
 
 ```sh 
-$ make progression
+$ brain-progression
 ```
 
 Winner  
@@ -69,7 +69,7 @@ Loser
 ### how to play: "brain-prime"
 
 ```sh 
-$ make prime
+$ brain-prime
 ```
 
 Winner  
