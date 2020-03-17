@@ -14,7 +14,7 @@ const subtract = (a, b) => a - b;
 // get random operator
 const getOperator = () => {
   const operators = ['+', '-', '*'];
-  const randomize = getRandomNumber(0, 3);
+  const randomize = getRandomNumber(0, 2);
   return operators[randomize];
 };
 // game rule
