@@ -18,12 +18,10 @@ const gameRule = 'Find the greatest common divisor of given numbers.';
 
 // game logic
 const gameGcd = () => {
-  const result = [];
   const pair = pairs.cons(getRandomNumber(1, 101), getRandomNumber(1, 101));
   const correctAnser = gcd(pairs.car(pair), pairs.cdr(pair));
   const expression = `${pairs.car(pair)} ${pairs.cdr(pair)}`;
-  result.push(expression, String(correctAnser));
-  return result;
+  return [expression, String(correctAnser)];
 };
 
 // game start
