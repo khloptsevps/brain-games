@@ -1,29 +1,14 @@
 import getRandomNumber from '../helper/math.js';
 import gameEngine from '../src/index.js';
 
-// even number check
-const isEven = (num) => {
-  if (num % 2 === 0) {
-    return true;
-  }
-  return false;
-};
-
 // game rule
-const gameRule = () => '\nAnswer "yes" if the number is even, otherwise "no".\n';
+const gameRule = 'Answer "yes" if the number is even, otherwise "no".';
 
 // game
 const gameEven = () => {
-  const result = [];
   const number = getRandomNumber(1, 101);
-  let correctAnswer;
-  if (isEven(number)) {
-    correctAnswer = 'yes';
-  } else {
-    correctAnswer = 'no';
-  }
-  result.push(number, correctAnswer);
-  return result;
+  const correctAnswer = number % 2 === 0 ? 'yes' : 'no';
+  return [number, correctAnswer];
 };
 
-export default () => gameEngine(gameRule(), gameEven);
+export default () => gameEngine(gameRule, gameEven);
