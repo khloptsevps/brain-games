@@ -19,17 +19,10 @@ const gameRule = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 // game logic
 const gamePrime = () => {
-  const result = [];
   const number = getRandomNumber(1, 101);
-  let correctAnswer;
-  if (isPrime(number)) {
-    correctAnswer = 'yes';
-  } else {
-    correctAnswer = 'no';
-  }
+  const correctAnswer = isPrime(number) ? 'yes' : 'no';
   const expression = number;
-  result.push(expression, correctAnswer);
-  return result;
+  return [expression, correctAnswer];
 };
 
 export default () => gameEngine(gameRule, gamePrime);
