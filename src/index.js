@@ -9,15 +9,6 @@ const getName = () => {
   return name;
 };
 
-// if correctly answer
-const correct = () => 'Correct!\n';
-
-// user win
-const win = (name) => `\nCongratulations, ${name}!`;
-
-// user lose
-const lose = (userAnswer, correctAnswer, name) => `\n"${userAnswer}" is wrong asnwer ;(. Correct answer was "${correctAnswer}"\nLet's try again, ${name}!`;
-
 // answers check
 const isRight = (userAnswer, correctAnswer) => {
   if (userAnswer === correctAnswer) {
@@ -36,10 +27,10 @@ export default (gameRule, getQuestion) => {
     const [expression, correctAnswer] = question;
     const userAnswer = readlineSync.question(`Question: ${expression}\nYour answer: `);
     if (isRight(userAnswer, correctAnswer)) {
-      console.log(correct());
+      console.log('Correct!\n');
     } else {
-      return console.log(lose(userAnswer, correctAnswer, name));
+      return console.log(`\n"${userAnswer}" is wrong asnwer ;(. Correct answer was "${correctAnswer}"\nLet's try again, ${name}!`);
     }
   }
-  return console.log(win(name));
+  return console.log(`Congratulations, ${name}!`);
 };
