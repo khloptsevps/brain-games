@@ -18,10 +18,10 @@ const getOperator = () => {
   return operators[randomize];
 };
 // game task
-const taks = 'What is the result of the expression?';
+const task = 'What is the result of the expression?';
 
-// game
-const gameCalc = () => {
+// game logic
+const generateQuestionAndAnswer = () => {
   let answer = 0;
   const pair = pairs.cons(getRandomNumber(1, 25), getRandomNumber(1, 20));
   const operator = getOperator();
@@ -39,4 +39,4 @@ const gameCalc = () => {
   return [question, String(answer)];
 };
 
-export default () => console.log(gameEngine(taks, gameCalc));
+export default () => console.log(gameEngine(task, generateQuestionAndAnswer));

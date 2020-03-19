@@ -18,10 +18,10 @@ const isPrime = (num) => {
 const task = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 // game logic
-const gamePrime = () => {
+const generateQuestionAndAnswer = () => {
   const question = getRandomNumber(1, 101);
   const answer = isPrime(question) ? 'yes' : 'no';
   return [question, answer];
 };
 
-export default () => console.log(gameEngine(task, gamePrime));
+export default () => console.log(gameEngine(task, generateQuestionAndAnswer));
