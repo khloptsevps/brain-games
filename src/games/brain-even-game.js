@@ -2,13 +2,15 @@ import getRandomNumber from '../utils/math.js';
 import gameEngine from '../index.js';
 
 // game rule
-const gameRule = 'Answer "yes" if the number is even, otherwise "no".';
+const task = 'Answer "yes" if the number is even, otherwise "no".';
+
+const isEven = (num) => num % 2 === 0;
 
 // game
-const gameEven = () => {
-  const number = getRandomNumber(1, 101);
-  const correctAnswer = number % 2 === 0 ? 'yes' : 'no';
-  return [number, correctAnswer];
+const questionAndAnswer = () => {
+  const question = getRandomNumber(1, 101);
+  const answer = isEven(question) ? 'yes' : 'no';
+  return [question, answer];
 };
 
-export default () => gameEngine(gameRule, gameEven);
+export default () => gameEngine(task, questionAndAnswer);
