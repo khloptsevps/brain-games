@@ -17,26 +17,26 @@ const getOperator = () => {
   const randomize = getRandomNumber(0, 2);
   return operators[randomize];
 };
-// game rule
-const gameRule = 'What is the result of the expression?';
+// game task
+const taks = 'What is the result of the expression?';
 
 // game
 const gameCalc = () => {
-  let correctAnswer = 0;
+  let answer = 0;
   const pair = pairs.cons(getRandomNumber(1, 25), getRandomNumber(1, 20));
   const operator = getOperator();
   switch (operator) {
     case '+':
-      correctAnswer = sum(pairs.car(pair), pairs.cdr(pair));
+      answer = sum(pairs.car(pair), pairs.cdr(pair));
       break;
     case '-':
-      correctAnswer = subtract(pairs.car(pair), pairs.cdr(pair));
+      answer = subtract(pairs.car(pair), pairs.cdr(pair));
       break;
     default:
-      correctAnswer = multiply(pairs.car(pair), pairs.cdr(pair));
+      answer = multiply(pairs.car(pair), pairs.cdr(pair));
   }
-  const expression = `${pairs.car(pair)} ${operator} ${pairs.cdr(pair)}`;
-  return [expression, String(correctAnswer)];
+  const question = `${pairs.car(pair)} ${operator} ${pairs.cdr(pair)}`;
+  return [question, String(answer)];
 };
 
-export default () => gameEngine(gameRule, gameCalc);
+export default () => console.log(gameEngine(taks, gameCalc));

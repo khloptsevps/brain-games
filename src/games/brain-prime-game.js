@@ -14,15 +14,14 @@ const isPrime = (num) => {
   return true;
 };
 
-// game rule
-const gameRule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+// game task
+const task = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 // game logic
 const gamePrime = () => {
-  const number = getRandomNumber(1, 101);
-  const correctAnswer = isPrime(number) ? 'yes' : 'no';
-  const expression = number;
-  return [expression, correctAnswer];
+  const question = getRandomNumber(1, 101);
+  const answer = isPrime(question) ? 'yes' : 'no';
+  return [question, answer];
 };
 
-export default () => gameEngine(gameRule, gamePrime);
+export default () => console.log(gameEngine(task, gamePrime));

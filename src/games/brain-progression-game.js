@@ -13,25 +13,19 @@ const buildProgression = () => {
   return result;
 };
 
-// game rule
-const gameRule = 'What number is missing in the progression?';
+// game task
+const task = 'What number is missing in the progression?';
 
 // game
 const gameProgression = () => {
   const progression = buildProgression();
   const index = getRandomNumber(0, 9);
-  const correctAnswer = progression[index];
-  const expression = progression.map((item) => {
-    let hidedItem = item;
-    if (hidedItem === correctAnswer) {
-      hidedItem = '..';
-    }
-    return hidedItem;
-  })
+  const answer = progression[index];
+  const question = progression
+    .map((item) => ((item === answer) ? '..' : item))
     .join(' ');
-
-  return [expression, String(correctAnswer)];
+  return [question, String(answer)];
 };
 
 // game start
-export default () => gameEngine(gameRule, gameProgression);
+export default () => console.log(gameEngine(task, gameProgression));

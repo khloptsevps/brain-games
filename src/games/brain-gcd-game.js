@@ -13,16 +13,16 @@ const gcd = (num1, num2) => {
   return result;
 };
 
-// game rule
-const gameRule = 'Find the greatest common divisor of given numbers.';
+// game task
+const task = 'Find the greatest common divisor of given numbers.';
 
 // game logic
 const gameGcd = () => {
   const pair = pairs.cons(getRandomNumber(1, 101), getRandomNumber(1, 101));
-  const correctAnswer = gcd(pairs.car(pair), pairs.cdr(pair));
-  const expression = `${pairs.car(pair)} ${pairs.cdr(pair)}`;
-  return [expression, String(correctAnswer)];
+  const answer = gcd(pairs.car(pair), pairs.cdr(pair));
+  const question = `${pairs.car(pair)} ${pairs.cdr(pair)}`;
+  return [question, String(answer)];
 };
 
 // game start
-export default () => gameEngine(gameRule, gameGcd);
+export default () => console.log(gameEngine(task, gameGcd));
