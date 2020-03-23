@@ -1,21 +1,12 @@
-import pairs from '@hexlet/pairs';
 import getRandomNumber from '../utils/math.js';
-import gameEngine from '../index.js';
+import runGameEngine from '../index.js';
 
-// sum two elements
-const sum = (a, b) => a + b;
-
-// multiply two element
-const multiply = (a, b) => a * b;
-
-// subtract two elements
-const subtract = (a, b) => a - b;
+const operatorsArray = ['+', '-', '*'];
 
 // get random operator
-const getOperator = () => {
-  const operators = ['+', '-', '*'];
+const getOperator = (arr) => {
   const randomize = getRandomNumber(0, 2);
-  return operators[randomize];
+  return arr[randomize];
 };
 // game task
 const task = 'What is the result of the expression?';
@@ -23,20 +14,21 @@ const task = 'What is the result of the expression?';
 // game logic
 const generateQuestionAndAnswer = () => {
   let answer = 0;
-  const pair = pairs.cons(getRandomNumber(1, 25), getRandomNumber(1, 20));
-  const operator = getOperator();
+  const num1 = getRandomNumber(1, 20);
+  const num2 = getRandomNumber(1, 20);
+  const operator = getOperator(operatorsArray);
   switch (operator) {
     case '+':
-      answer = sum(pairs.car(pair), pairs.cdr(pair));
+      answer = num1 + num2;
       break;
     case '-':
-      answer = subtract(pairs.car(pair), pairs.cdr(pair));
+      answer = num1 - num2;
       break;
     default:
-      answer = multiply(pairs.car(pair), pairs.cdr(pair));
+      answer = num1 * num2;
   }
-  const question = `${pairs.car(pair)} ${operator} ${pairs.cdr(pair)}`;
+  const question = `${num1} ${operator} ${num2}`;
   return [question, String(answer)];
 };
 
-export default () => console.log(gameEngine(task, generateQuestionAndAnswer));
+export default () => runGameEngine(task, generateQuestionAndAnswer);
