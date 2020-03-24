@@ -1,6 +1,6 @@
 {
   "name": "hr-brain-games",
-  "version": "1.9.2",
+  "version": "1.9.3",
   "description": "my-first-npm-package",
   "main": "src/index.js",
   "type": "module",
