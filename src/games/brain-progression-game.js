@@ -1,15 +1,13 @@
 import getRandomNumber from '../utils/math.js';
-import gameEngine from '../index.js';
+import RunGameEngine from '../index.js';
 
 // buildMathProgression
-const buildProgression = () => {
-  let begin = getRandomNumber(0, 101);
-  const step = getRandomNumber(1, 5);
-  const progressionLength = 10;
+const buildProgression = (begin, step, length) => {
+  let item = begin;
   const result = [];
-  for (let i = 1; i <= progressionLength; i += 1) {
-    result.push(begin);
-    begin += step;
+  for (let i = 1; i <= length; i += 1) {
+    result.push(item);
+    item += step;
   }
   return result;
 };
@@ -19,7 +17,7 @@ const task = 'What number is missing in the progression?';
 
 // game logic
 const gameProgression = () => {
-  const progression = buildProgression();
+  const progression = buildProgression(getRandomNumber(0, 100), getRandomNumber(1, 5), 10);
   const index = getRandomNumber(0, 9);
   const answer = progression[index];
   const question = progression
@@ -29,4 +27,4 @@ const gameProgression = () => {
 };
 
 // game start
-export default () => console.log(gameEngine(task, gameProgression));
+export default () => RunGameEngine(task, gameProgression);
