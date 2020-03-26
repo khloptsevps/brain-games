@@ -1,7 +1,7 @@
 {
   "name": "hr-brain-games",
   "version": "1.9.5",
-  "description": "my-first-npm-package",
+  "description": "study project by Hexlet.io",
   "main": "src/index.js",
   "type": "module",
   "scripts": {
@@ -25,7 +25,8 @@
     "hr-brain-games",
     "hrbraingames",
     "hr",
-    "hangryrabbit"
+    "khloptsev",
+    "khloptsevps"
   ],
   "author": "khloptsevps",
   "license": "ISC",
