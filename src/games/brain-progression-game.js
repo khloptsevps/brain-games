@@ -3,11 +3,9 @@ import RunGameEngine from '../index.js';
 
 // buildMathProgression
 const buildProgression = (begin, step, length) => {
-  let item = begin;
   const result = [];
-  for (let i = 1; i <= length; i += 1) {
-    result.push(item);
-    item += step;
+  for (let i = 0; i < length; i += 1) {
+    result.push(begin + i * step);
   }
   return result;
 };
@@ -15,16 +13,23 @@ const buildProgression = (begin, step, length) => {
 // game task
 const task = 'What number is missing in the progression?';
 
+// utils
+const progressionLength = 10;
+const maxBeginItem = 100;
+const maxStep = 5;
+const maxIndex = 9;
+
 // game logic
-const gameProgression = () => {
-  const progression = buildProgression(getRandomNumber(0, 100), getRandomNumber(1, 5), 10);
-  const index = getRandomNumber(0, 9);
+const genGameData = () => {
+  const firstItem = getRandomNumber(0, maxBeginItem);
+  const progressionStep = getRandomNumber(1, maxStep);
+  const index = getRandomNumber(0, maxIndex);
+  const progression = buildProgression(firstItem, progressionStep, progressionLength);
+  progression[index] = '..';
   const answer = progression[index];
-  const question = progression
-    .map((item) => ((item === answer) ? '..' : item))
-    .join(' ');
+  const question = progression.join(' ');
   return [question, String(answer)];
 };
 
 // game start
-export default () => RunGameEngine(task, gameProgression);
+export default () => RunGameEngine(task, genGameData);
