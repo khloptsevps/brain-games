@@ -13,7 +13,7 @@ const getGcd = (num1, num2) => {
 const task = 'Find the greatest common divisor of given numbers.';
 
 // game logic
-const generateQuestionAndAnswer = () => {
+const genGameData = () => {
   const num1 = getRandomNumber(1, 101);
   const num2 = getRandomNumber(1, 101);
   const answer = getGcd(num1, num2);
@@ -22,4 +22,4 @@ const generateQuestionAndAnswer = () => {
 };
 
 // game start
-export default () => RunGameEngine(task, generateQuestionAndAnswer);
+export default () => RunGameEngine(task, genGameData);

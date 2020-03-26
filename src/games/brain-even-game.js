@@ -7,10 +7,10 @@ const task = 'Answer "yes" if the number is even, otherwise "no".';
 const isEven = (num) => num % 2 === 0;
 
 // game logic
-const generateQuestionAndAnswer = () => {
+const genGameData = () => {
   const question = getRandomNumber(1, 101);
   const answer = isEven(question) ? 'yes' : 'no';
   return [String(question), answer];
 };
 
-export default () => runGameEngine(task, generateQuestionAndAnswer);
+export default () => runGameEngine(task, genGameData);
