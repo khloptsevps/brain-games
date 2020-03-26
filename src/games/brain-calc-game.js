@@ -1,34 +1,39 @@
 import getRandomNumber from '../utils/math.js';
 import runGameEngine from '../index.js';
 
-const operatorsArray = ['+', '-', '*'];
+const operators = ['+', '-', '*'];
 
 // get random operator
 const getOperator = (arr) => {
-  const randomize = getRandomNumber(0, 2);
+  const randomize = getRandomNumber(0, arr.length - 1);
   return arr[randomize];
 };
+
+// calculating
+const makeCalc = (num1, num2, operator) => {
+  switch (operator) {
+    case '+':
+      return num1 + num2;
+    case '-':
+      return num1 - num2;
+    case '*':
+      return num1 * num2;
+    default:
+      throw new Error(`Unknown operator: '${operator}'!`);
+  }
+};
+
 // game task
 const task = 'What is the result of the expression?';
 
 // game logic
-const generateQuestionAndAnswer = () => {
-  let answer = 0;
+const genGameData = () => {
   const num1 = getRandomNumber(1, 20);
   const num2 = getRandomNumber(1, 20);
-  const operator = getOperator(operatorsArray);
-  switch (operator) {
-    case '+':
-      answer = num1 + num2;
-      break;
-    case '-':
-      answer = num1 - num2;
-      break;
-    default:
-      answer = num1 * num2;
-  }
+  const operator = getOperator(operators);
   const question = `${num1} ${operator} ${num2}`;
+  const answer = makeCalc(num1, num2, operator);
   return [question, String(answer)];
 };
 
-export default () => runGameEngine(task, generateQuestionAndAnswer);
+export default () => runGameEngine(task, genGameData);
