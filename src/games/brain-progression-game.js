@@ -22,8 +22,8 @@ const maxStep = 5;
 const genGameData = () => {
   const firstItem = getRandomNumber(0, maxBeginItem);
   const progressionStep = getRandomNumber(1, maxStep);
-  const index = getRandomNumber(0, progressionLength - 1);
   const progression = buildProgression(firstItem, progressionStep, progressionLength);
+  const index = getRandomNumber(0, progressionLength - 1);
   progression[index] = '..';
   const answer = progression[index];
   const question = progression.join(' ');
