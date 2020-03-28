@@ -3,14 +3,8 @@ import runGameEngine from '../index.js';
 
 const operators = ['+', '-', '*'];
 
-// get random operator
-const getOperator = (arr) => {
-  const randomize = getRandomNumber(0, arr.length - 1);
-  return arr[randomize];
-};
-
 // calculating
-const makeCalc = (num1, num2, operator) => {
+const calculate = (num1, num2, operator) => {
   switch (operator) {
     case '+':
       return num1 + num2;
@@ -30,9 +24,9 @@ const task = 'What is the result of the expression?';
 const genGameData = () => {
   const num1 = getRandomNumber(1, 20);
   const num2 = getRandomNumber(1, 20);
-  const operator = getOperator(operators);
+  const operator = operators[getRandomNumber(0, operators.length - 1)];
   const question = `${num1} ${operator} ${num2}`;
-  const answer = makeCalc(num1, num2, operator);
+  const answer = calculate(num1, num2, operator);
   return [question, String(answer)];
 };
 
