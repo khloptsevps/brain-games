@@ -1,6 +1,6 @@
 {
   "name": "hr-brain-games",
-  "version": "1.9.5",
+  "version": "2.0.0",
   "description": "study project by Hexlet.io",
   "main": "src/index.js",
   "type": "module",
